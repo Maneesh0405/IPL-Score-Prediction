@@ -51,20 +51,20 @@ An advanced, final-year-project-grade IPL match analysis system. This applicatio
 
 ## 📂 Project Structure
 - `app.py`: Flask backend serving the API and frontend files.
-- `train_model.py`: Script to preprocess data and train the ML model.
+- `train_v2.py` & `train_win.py`: Scripts to preprocess data and train the ML models.
 - `static/`: Contains CSS styling and Frontend logic.
 - `templates/`: Contains the main HTML structure.
-- `ipl_score_model.pkl`: The trained machine learning model.
-- `model_columns.pkl`: Metadata for model input features.
-- `deliveries.csv` & `matches.csv`: Historical IPL data for training.
+- `models/ipl_score_model_v2.pkl` & `models/ipl_win_model.pkl`: The trained machine learning models.
+- `models/model_columns_v2.pkl` & `models/win_columns.pkl`: Metadata for model input features.
+- `csv/deliveries.csv` & `csv/matches.csv`: Historical IPL data for training.
 
 ## 🧠 Methodology
-The model is trained using **Linear Regression**. We perform feature engineering on ball-by-ball data to extract:
+The models are trained using **Random Forest Regression and Classification**. We perform feature engineering on ball-by-ball data to extract:
 - Cumulative runs and wickets.
 - Current run rate and over progress.
 - One-hot encoded categorical features for venues and teams.
 
-The model achieves a **Mean Absolute Error (MAE)** of approximately **14 runs**, which is quite competitive for T20 score prediction.
+The score prediction model achieves a **Mean Absolute Error (MAE)** of approximately **15 runs**, which is quite competitive for T20 score prediction, while the win probability model achieves an accuracy of ~82%.
 
 ## 📄 License
 This project is for educational purposes. All IPL data is sourced from public repositories.

@@ -66,5 +66,3 @@ The models are trained using **Random Forest Regression and Classification**. We
 
 The score prediction model achieves a **Mean Absolute Error (MAE)** of approximately **15 runs**, which is quite competitive for T20 score prediction, while the win probability model achieves an accuracy of ~82%.
 
-## 📄 License
-This project is for educational purposes. All IPL data is sourced from public repositories.
